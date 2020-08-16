@@ -24,7 +24,7 @@ I hacked up a script [diff.rb](diff.rb) to compare the collection boxes in the F
 
 Below is an analysis showing the difference in # of collection boxes between the FOIA and scraped data. There is a large drop in the number of reported boxes in DC. This is because many of the boxes in DC are not currently listed in the [USPS PO Locator tool](https://tools.usps.com/find-location.htm) (maybe due to a software error with that tool?)
 
-foia state|2019 count|2020 count|change|change pct
+state|2019 count|2020 count|change|change pct
 ----------|----------|----------|------|----------
 DC|792|115|-677|-85%
 AK|424|395|-29|-7%
