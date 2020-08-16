@@ -15,6 +15,13 @@ If you want to use the JSON files directly, note that a collection box may appea
 
 I hacked up a script [parse_all_collection_boxes.rb](parse_all_collection_boxes.rb) which converts the mess of JSON files into a CSV file. For consistency, the CSV file uses the same column headers as the `coll report.xlsx` file from the FOIA data. You can download the CSV file here: [collection_boxes_2020-08-15.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-15.csv)
 
+## 2019 to 2020 Added and Removed
+I hacked up a script [diff.rb](diff.rb) to compare the collection boxes in the FOIA dataset vs the scraped one. See the script for details regarding the algorithm. You can download the results here:
+
+[removed_2019_to_2020.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/removed_2019_to_2020.csv) collection boxes that appear in the FOIA dataset but not the 8/15/2020 scraped dataset
+
+[added_2019_to_2020.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/added_2019_to_2020.csv) collection boxes that appear in the 8/15/2020 scraped dataset but not the FOIA dataset
+
 ## What's next?
 I set up a scheduled job to regularly scrape the collection box data. I will update this document as more files become available.
 
