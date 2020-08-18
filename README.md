@@ -9,11 +9,15 @@ I made a request to USPS in August 2019 for a list of all collection boxes and p
 That response is available to download here: [foia_2019-09-27.zip](https://collectionboxes.nyc3.digitaloceanspaces.com/foia_2019-09-27.zip)
 
 ## Scraped Dataset
-I ran a scrape of the [USPS PO Locator](https://tools.usps.com/find-location.htm) on August 15, 2020. This scrape produced a zip file containing 32,977 JSON documents. The zip file is available here: [collection_boxes_2020-08-15.zip](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-15.zip)
 
-If you want to use the JSON files directly, note that a collection box may appear in multiple files. You need to de-dup the collection boxes using the locationID.
+I'm running a regular scrape of the [USPS PO Locator](https://tools.usps.com/find-location.htm). This scrape produces a zip file containing approximately 32,000 JSON documents. If you want to use the JSON files directly, note that a collection box may appear in multiple files. You need to de-dup the collection boxes using the locationID.
 
-I hacked up a script [parse_all_collection_boxes.rb](parse_all_collection_boxes.rb) which converts the mess of JSON files into a CSV file. For consistency, the CSV file uses the same column headers as the `coll report.xlsx` file from the FOIA data. You can download the CSV file here: [collection_boxes_2020-08-15.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-15.csv)
+I hacked up a script [parse_all_collection_boxes.rb](parse_all_collection_boxes.rb) which converts the mess of JSON files into a CSV file. For consistency, the CSV file uses the same column headers as the `coll report.xlsx` file from the FOIA data.
+
+date|json|csv
+----|----|---
+2020-08-15|[collection_boxes_2020-08-15.zip](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-15.zip)|[collection_boxes_2020-08-15.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-15.csv)
+2020-08-17|[collection_boxes_2020-08-17.zip](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-17.zip)|[collection_boxes_2020-08-17.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-17.csv)
 
 ## 2019 to 2020 Added and Removed
 I hacked up a script [diff.rb](diff.rb) to compare the collection boxes in the FOIA dataset vs the scraped one. See the script for details regarding the algorithm. You can download the results here:
@@ -22,7 +26,7 @@ I hacked up a script [diff.rb](diff.rb) to compare the collection boxes in the F
 
 [added_2019_to_2020.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/added_2019_to_2020.csv) collection boxes that appear in the 8/15/2020 scraped dataset but not the FOIA dataset
 
-Below is an analysis showing the difference in # of collection boxes between the FOIA and scraped data. There is a large drop in the number of reported boxes in DC. This is because many of the boxes in DC are not currently listed in the [USPS PO Locator tool](https://tools.usps.com/find-location.htm) (maybe due to a software error with that tool?)
+Below is an analysis showing the difference in # of collection boxes between the FOIA and 8/15/2020 scraped data. There is a large drop in the number of reported boxes in DC. This is because many of the boxes in DC are not currently listed in the [USPS PO Locator tool](https://tools.usps.com/find-location.htm) (maybe due to a software error with that tool?)
 
 state|2019 count|2020 count|change|change pct
 ----------|----------|----------|------|----------
@@ -82,6 +86,10 @@ SC|2286|2290|4|0%
 
 ## What's next?
 I set up a scheduled job to regularly scrape the collection box data. I will update this document as more files become available.
+
+## External Links
+- [iandees/usps-collection-boxes](https://github.com/iandees/usps-collection-boxes) similar project collecting USPS Collection Box locations
+- [russbiggs/spot-the-box](https://github.com/russbiggs/spot-the-box) crowdsourced effort to check whether collection boxes have been removed
 
 ## LICENSE
 I don't own any of this data. So, I have no right to put restrictions on their use. I also have no desire to put restrictions on their use. Have fun!

@@ -67,4 +67,8 @@ def added
   output_missing(BOXES_FILE_2020, BOXES_FILE_2019)
 end
 
+def missing
+  output_missing(ARGV.fetch(1), ARGV.fetch(2))
+end
+
 send(ARGV[0].to_sym)
