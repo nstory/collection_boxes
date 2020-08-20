@@ -18,6 +18,7 @@ date|json|csv
 ----|----|---
 2020-08-15|[collection_boxes_2020-08-15.zip](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-15.zip)|[collection_boxes_2020-08-15.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-15.csv)
 2020-08-17|[collection_boxes_2020-08-17.zip](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-17.zip)|[collection_boxes_2020-08-17.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-17.csv)
+2020-08-19|[collection_boxes_2020-08-19.zip](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-19.zip)|[collection_boxes_2020-08-19.csv](https://collectionboxes.nyc3.digitaloceanspaces.com/collection_boxes_2020-08-19.csv)
 
 ## 2019 to 2020 Added and Removed
 I hacked up a script [diff.rb](diff.rb) to compare the collection boxes in the FOIA dataset vs the scraped one. See the script for details regarding the algorithm. You can download the results here:
