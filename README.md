@@ -91,6 +91,7 @@ I set up a scheduled job to regularly scrape the collection box data. I will upd
 ## External Links
 - [iandees/usps-collection-boxes](https://github.com/iandees/usps-collection-boxes) similar project collecting USPS Collection Box locations
 - [russbiggs/spot-the-box](https://github.com/russbiggs/spot-the-box) crowdsourced effort to check whether collection boxes have been removed
+- [https://persichitte.com/mail/](https://persichitte.com/mail/) analysis of this data by Robert Persichitte
 
 ## LICENSE
 I don't own any of this data. So, I have no right to put restrictions on their use. I also have no desire to put restrictions on their use. Have fun!
